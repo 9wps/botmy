@@ -8,7 +8,7 @@ TOKEN = os.getenv('TELEGRAM_BOT_TOKEN')
 
 # دالة للتعامل مع الأمر /start
 def start(update: Update, context: CallbackContext):
-    keyboard = [[InlineKeyboardButton("Play Game", url='https://your-game-url.com')]]
+    keyboard = [[InlineKeyboardButton("Play Game", url='http://t.me/vnn59bot/FROG')]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     update.message.reply_text('Welcome! Click the button below to play the game:', reply_markup=reply_markup)
 
