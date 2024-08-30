@@ -14,8 +14,10 @@ def start(update: Update, context: CallbackContext):
 
 # دالة لمعالجة الرسائل النصية الأخرى (اختياري)
 def handle_message(update: Update, context: CallbackContext):
-    if update.message.text.lower() == 'play':
-        update.message.reply_text('You can start the game by clicking the "Play Game" button.')
+    # تحقق من وجود رسالة وتحقق من النص
+    if update.message and update.message.text:
+        if update.message.text.lower() == 'play':
+            update.message.reply_text('You can start the game by clicking the "Play Game" button.')
 
 # إعداد البوت
 def main():
